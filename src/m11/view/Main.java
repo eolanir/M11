@@ -5,7 +5,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		new Marco().setVisible(true);
-		System.out.println("Hello");
 	}
 
 }
