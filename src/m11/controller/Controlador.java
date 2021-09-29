@@ -64,10 +64,7 @@ public class Controlador {
 	
 	
 	public void imprimirStock() {
-		floristeria = new Floristeria("tienda");
-		addDecoracion();
-		addFlor();
-		addArbol();
+		
 		JOptionPane.showMessageDialog(null, new JList(floristeria.getListaProductos()), "Stock de la tienda " + floristeria.getNombre(), JOptionPane.INFORMATION_MESSAGE);
 	}
 	
