@@ -16,40 +16,58 @@ public class Lamina extends JPanel {
 		setBackground(new Color(51, 153, 0));
 		setLayout(null);
 		
-		JButton addArbol = new JButton("Arbol");
-		addArbol.addActionListener(new ActionListener() {
+		JButton botArbol = new JButton("Arbol");
+		botArbol.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				controlador.addArbol();
 			}
 		});
-		addArbol.setBounds(28, 25, 110, 35);
-		add(addArbol);
+		botArbol.setBounds(316, 121, 110, 35);
+		add(botArbol);
 		
-		JButton flor = new JButton("Flor");
-		flor.addActionListener(new ActionListener() {
+		JButton botFlor = new JButton("Flor");
+		botFlor.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				controlador.addFlor();
 			}
 		});
-		flor.setBounds(28, 121, 110, 35);
-		add(flor);
+		botFlor.setBounds(28, 121, 110, 35);
+		add(botFlor);
 		
-		JButton decoracion = new JButton("Decoración");
-		decoracion.addActionListener(new ActionListener() {
+		JButton botDecoracion = new JButton("Decoración");
+		botDecoracion.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				controlador.addDecoracion();
 			}
 		});
-		decoracion.setBounds(28, 236, 110, 35);
-		add(decoracion);
+		botDecoracion.setBounds(176, 121, 110, 35);
+		add(botDecoracion);
 		
 		JButton botStock = new JButton("Stock");
-		botStock.setBounds(314, 121, 110, 35);
+		botStock.setBounds(176, 237, 110, 35);
+		botStock.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				controlador.imprimirStock();
+			}
+		});
 		add(botStock);
+		
+		JButton botFloristeria = new JButton("Floristeria");
+		botFloristeria.setBounds(176, 25, 110, 35);
+		botFloristeria.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				controlador.crearFloristeria();
+			}
+		});
+		add(botFloristeria);
 	}
 }
