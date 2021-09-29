@@ -76,8 +76,11 @@ public class Controlador {
 	
 	
 	public void imprimirStock() {
-		
-		JOptionPane.showMessageDialog(null, new JList(floristeria.getListaProductos()), "Stock de la tienda " + floristeria.getNombre(), JOptionPane.INFORMATION_MESSAGE);
+		if(floristeria == null) {
+			JOptionPane.showMessageDialog(null, "Floristeria inexistente.", "alert", JOptionPane.ERROR_MESSAGE);
+		} else {
+			JOptionPane.showMessageDialog(null, new JList(floristeria.getListaProductos()), "Stock de la tienda " + floristeria.getNombre(), JOptionPane.INFORMATION_MESSAGE);
+		}
 	}
 	
 	
