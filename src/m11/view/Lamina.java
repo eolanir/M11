@@ -20,7 +20,7 @@ public class Lamina extends JPanel {
 		botArbol.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				controlador.addArbol();
 			}
 		});
 		botArbol.setBounds(316, 121, 110, 35);
@@ -31,7 +31,7 @@ public class Lamina extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				controlador.addFlor();
 			}
 		});
 		botFlor.setBounds(28, 121, 110, 35);
@@ -42,7 +42,7 @@ public class Lamina extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				controlador.addDecoracion();
 			}
 		});
 		botDecoracion.setBounds(176, 121, 110, 35);
@@ -54,7 +54,7 @@ public class Lamina extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				controlador.imprimirStock();
 			}
 		});
 		add(botStock);
@@ -65,7 +65,7 @@ public class Lamina extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				controlador.crearFloristeria();
 			}
 		});
 		add(botFloristeria);
